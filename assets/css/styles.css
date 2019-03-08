@@ -1,0 +1,31 @@
+/* Header Styles */
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo timer rightOptions"
+                       "ad ad ad";
+  justify-items: center;
+  align-items: center;
+}
+
+.top-nav,
+.main-nav {
+  display: none;
+}
+
+.header .logo {
+  grid-area: logo;
+  width: 106px;
+  background-color: red;
+  padding: 20px
+}
+
+.header .right-items {
+  grid-area: rightOptions;
+  display: flex;
+}
+
+.header .nav-ad {
+  grid-area: ad;
+}
