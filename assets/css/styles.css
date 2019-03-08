@@ -107,8 +107,13 @@ display: flex;
 .item-image img{
   width: 100%;
 } 
+
+.item-image-info{
+  width: 65%;
+}
 .item-image-info h4{
   font-size: 18px;
+  
   padding-bottom: 10px;
 }
 
