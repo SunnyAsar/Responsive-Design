@@ -1,14 +1,18 @@
 /* Header Styles */
 
-*{
+* {
   box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
 }
 
 .header {
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "logo timer rightOptions"
-                       "ad ad ad";
+    "ad ad ad";
   justify-items: center;
   align-items: center;
 }
@@ -33,96 +37,182 @@
 .header .nav-ad {
   grid-area: ad;
 }
-.banner{
+
+.banner {
   width: 100%;
   display: flex;
   flex-direction: column;
 
 }
 
-.large-banner{
+.large-banner {
   height: 200px;
-  background: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/IWD-796x417.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/IWD-796x417.jpg");
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  margin:0px 10px;
+  margin: 0px 10px;
 
-  
+
 }
 
-.banner-item{
+.banner-item {
   height: 200px;
-  background: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/IWD-796x417.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/IWD-796x417.jpg");
   background-size: cover;
   display: flex;
   align-items: flex-end;
-  margin:10px;
+  margin: 10px;
 
-  
-}
-
-.banner-items{
-  padding: 10px 20px 10px 10px ;
 
 }
 
-.banner-items .tag{
+.banner-items {
+  padding: 10px 20px 10px 10px;
+
+}
+
+.banner-items .tag {
   color: snow;
   font-size: 14px;
   font-weight: 500
 }
-.banner-items .title{
+
+.banner-items .title {
   color: white;
   font-size: 20px;
   letter-spacing: 0.5
 }
 
-.banner-item-footer{
+.banner-item-footer {
   display: flex;
   justify-content: space-around;
   color: silver;
   font-size: 14px
 }
 
-.latest-news-container{
+.latest-news-container {
   margin: 20px 10px 10px;
   display: flex;
   flex-direction: column;
 }
 
-.latest-news-container h2{
+.latest-news-container h2 {
   color: salmon;
   font-size: 20px;
   padding-left: 15px;
   margin-bottom: 10px;
 }
-.latest-news-item{
-display: flex;
+
+.latest-news-item {
+  display: flex;
 }
-.item-image{
-  width:30%;
+
+.item-image {
+  width: 30%;
   padding-right: 10px;
 }
-.item-image img{
-  width: 100%;
-} 
 
-.item-image-info{
+.item-image img {
+  width: 100%;
+}
+
+.item-image-info {
   width: 65%;
 }
-.item-image-info h4{
+
+.item-image-info h4 {
   font-size: 18px;
-  
+
   padding-bottom: 10px;
 }
 
-.item-footer{
+.item-footer {
   display: flex;
   justify-content: space-between;
   color: silver;
   font-size: 14px;
 }
-.item-footer li{
-  padding-right:  20px;
+
+.item-footer li {
+  padding-right: 20px;
+}
+
+.section-item {
+  padding: 15px;
+  /* margin-bottom: 10px; */
+}
+
+.section-item h3 {
+  font-size: 1.6rem;
+  color: red;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.section-item h3:after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-size: 16px 16px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-left: 4px;
+  position: relative;
+  top: 0;
+  width: 16px;
+}
+
+.section-item .banner-item {
+  margin: 0;
+}
+
+.section-latest {
+  background-color: rgba(255, 68, 34, .06);
+  color: red;
+  display: flex;
+}
+
+.section-latest .text-container {
+  padding: 10px;
+  flex: 1;
+  font-size: .9rem;
+}
+
+.section-latest h5 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-latest p {
+  font-weight: bold;
+}
+
+.section-latest .image {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/Untitled-design.jpg");
+  background-position: 50%;
+  background-size: cover;
+  width: 96px;
+  height: 96px;
+}
+
+.section-posts .post-list-item {
+  padding: 6px 0 6px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 12px;
+  color: gray;
+  position: relative;
+}
+
+.section-posts .post-list-item:before {
+  background-color: #f42;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 4px;
 }
