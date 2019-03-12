@@ -3,6 +3,7 @@
 /* variables */
 :root{
   --social-media-size:35px;
+  --header-height: 48px;
 }
 
 
@@ -17,8 +18,7 @@ body {
 .header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-areas: "logo timer rightOptions"
-    "ad ad ad";
+  grid-template-areas: "logo timer rightOptions" "navad navad navad";
   justify-items: center;
   align-items: center;
 }
@@ -30,25 +30,44 @@ body {
 
 .header .logo {
   grid-area: logo;
-  width: 106px;
+  width: calc(var(--header-height) * 2.2);
+  height: var(--header-height);
   background-color: red;
-  padding: 20px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px; */
+}
+.header .logo img {
+  width: 60%;
 }
 
 .header .right-items {
   grid-area: rightOptions;
   display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.header .right-items li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--header-height);
+  border-left: 1px solid rgba(100, 100, 100, 0.3);
 }
 
 .header .nav-ad {
-  grid-area: ad;
+  grid-area: navad;
+  background-color: #FCED00;
+  height: 50px;
 }
 
 .banner {
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  margin-top: 40px;
 }
 
 .large-banner {
@@ -260,7 +279,7 @@ border: 2px solid #333;
 .page-footer .footer-social-media li:hover{
   background: transparent;
   cursor: pointer;
-  
+
 }
 
 
