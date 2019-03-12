@@ -216,6 +216,12 @@ body {
 
 .section-item .banner-item {
   margin: 0;
+  color: white;
+}
+
+.section-item .banner-item h4 {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .section-latest {
