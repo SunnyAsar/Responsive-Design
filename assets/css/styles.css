@@ -110,7 +110,7 @@ body {
 .banner-items .title {
   color: white;
   font-size: 20px;
-  letter-spacing: 0.5
+  letter-spacing: 0.5px;
 }
 
 .banner-item-footer {
