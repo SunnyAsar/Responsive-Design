@@ -1,0 +1,480 @@
+/* variables */
+:root {
+  --social-media-size: 35px;
+  --header-height: 48px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "logo timer rightOptions""navad navad navad";
+  justify-items: center;
+  align-items: center;
+  max-width: 100vw;
+}
+
+.header .nav-timer {
+  color: #f42;
+  padding: 5px;
+  padding-right: 10px;
+  font-weight: bold
+}
+
+.header .menu-bars {
+  color: #f42;
+}
+
+.header .search-button {
+  color: silver;
+}
+
+.top-nav,
+.main-nav {
+  display: none;
+}
+
+.header .logo {
+  grid-area: logo;
+  width: calc(var(--header-height) * 2.2);
+  height: 100%;
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 60%;
+}
+
+.header .right-items {
+  grid-area: rightOptions;
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.header .right-items li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--header-height);
+  border-left: 1px solid rgba(100, 100, 100, 0.3);
+  height: var(--header-height);
+}
+
+.header .nav-ad {
+  grid-area: navad;
+  background-color: #FCED00;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-item {
+  height: 200px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/IWD-796x417.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+.banner-items {
+  padding: 10px 20px 10px 10px;
+
+}
+
+.banner-items .tag {
+  color: snow;
+  font-size: 14px;
+  font-weight: 500
+}
+
+.banner-items .title {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.banner-item-footer {
+  display: flex;
+  justify-content: space-around;
+  color: silver;
+  font-size: 14px
+}
+
+.latest-news-section {
+  padding: 20px
+}
+
+.latest-news {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-news-section h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.latest-news-section h2:after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-size: 16px 16px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-left: 4px;
+  position: relative;
+  top: 0;
+  width: 16px;
+}
+
+.latest-news-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.item-image {
+  width: 30%;
+  height: auto;
+  padding-right: 10px;
+}
+
+.item-image img {
+  width: 100%;
+}
+
+.item-image-info {
+  flex: 1;
+}
+
+.item-image-info h4 {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: flex-start;
+  color: silver;
+  font-size: 14px;
+}
+
+.item-footer li {
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.item-footer .author:after {
+  content: '·';
+  margin-left: 5px;
+}
+
+.section-item {
+  padding: 15px;
+}
+
+.section-item h3 {
+  font-size: 1.6rem;
+  color: red;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.section-item h3:after {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="%23F42" stroke-width="3" stroke-miterlimit="10" d="M4.75 1.5l6.5 6.5-6.5 6.5"/></svg>');
+  background-size: 16px 16px;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-left: 4px;
+  position: relative;
+  top: 0;
+  width: 16px;
+}
+
+.section-item .banner-item {
+  margin: 0;
+  color: white;
+}
+
+.section-item .banner-item h4 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.section-latest {
+  background-color: rgba(255, 68, 34, .06);
+  color: red;
+  display: flex;
+}
+
+.section-latest .text-container {
+  padding: 10px;
+  flex: 1;
+  font-size: .9rem;
+}
+
+.section-latest h5 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-latest p {
+  font-weight: bold;
+}
+
+.section-latest .image {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/Untitled-design.jpg");
+  background-position: 50%;
+  background-size: cover;
+  width: 96px;
+  height: 96px;
+}
+
+.section-posts .post-list-item {
+  padding: 6px 0 6px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: 12px;
+  color: gray;
+  position: relative;
+}
+
+.section-posts .post-list-item:before {
+  background-color: #f42;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 4px;
+}
+
+.page-footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #1A1A1A;
+}
+
+.page-footer .footer-social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.page-footer .footer-social-media li {
+  background: #333;
+  margin-right: 5px;
+  height: var(--social-media-size);
+  width: var(--social-media-size);
+  line-height: var(--social-media-size);
+  text-align: center;
+  color: silver;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+
+.page-footer .footer-social-media li:hover {
+  background: transparent;
+  cursor: pointer;
+}
+
+.page-footer .footer-navigation {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 20px;
+
+}
+
+.page-footer .footer-navigation li {
+  font-size: 10px;
+  color: silver;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* ########### Media Queries ################# */
+
+@media (min-width: 480px) {
+  .header {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: "logo   rightOptions timer ""navad navad navad ";
+  }
+
+  .header .logo {
+    justify-self: start;
+  }
+}
+
+
+@media (min-width:768px) {
+  .header {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo topnav  topnav topnav ""logo main-nav  rightOptions timer ""navad navad navad navad ";
+  }
+
+  .main-nav {
+    grid-area: main-nav;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    padding: 0 17px;
+  }
+
+  .main-nav li {
+    color: silver;
+    font-size: 12px;
+    margin: 7px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .top-nav {
+    grid-area: topnav;
+    display: block;
+    background: #1A1A1A;
+    justify-self: start;
+    width: 100%;
+    color: silver;
+    height: 100%;
+  }
+
+  .top-nav ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    margin-left: 17px;
+  }
+
+  .top-nav ul li {
+    font-size: 9px;
+    margin: 5px;
+  }
+
+  .top-nav ul li:first-child {
+    color: white;
+  }
+
+  .header .right-items .menu-bars {
+    display: none;
+  }
+
+  .banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .banner>.big-banner {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+  }
+
+  .banner .big-banner .title {
+    font-size: 2.5rem;
+  }
+
+  .banner .banner-item {
+    margin: 0;
+  }
+
+  .latest-news {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+
+  .latest-news-item {
+    width: 33.33%;
+    padding: 5px;
+    flex-direction: column;
+  }
+
+  .latest-news-item .item-image {
+    width: 100%;
+  }
+
+  .more-content {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .section-item {
+    width: 50%;
+  }
+
+  .section-item .banner-item {
+    height: 300px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo main-nav  rightOptions ""navad navad navad navad ";
+  }
+
+  .top-nav {
+    display: none
+  }
+
+  .right-items .menu-bars {
+    display: none;
+  }
+
+  .nav-timer {
+    display: none;
+  }
+
+  .latest-news-item {
+    width: 25%;
+    flex-direction: column;
+  }
+
+  .section-item {
+    width: 33.333%;
+  }
+
+  .section-item .banner-item {
+    height: 200px;
+  }
+}
